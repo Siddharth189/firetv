@@ -1,0 +1,37 @@
+.upload-page {
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  background: rgb(3, 25, 62);
+  background: linear-gradient(
+    342deg,
+    rgba(3, 25, 62, 1) 0%,
+    rgba(7, 71, 177, 1) 61%,
+    rgba(248, 250, 255, 1) 99%
+  );
+}
+
+.picker-box {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.picker-box img {
+  border-radius: 50%;
+  box-shadow: 0 8px 8px -4px #041243;
+  margin: 40px;
+}
+
+.picker-box option,
+.picker-box button,
+.picker-box select {
+  width: 200px;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 20px;
+  background-color: #041243;
+  color: white;
+}

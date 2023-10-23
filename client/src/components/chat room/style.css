@@ -1,0 +1,55 @@
+.chat-room-page {
+  /* background: rgb(3, 25, 62);
+  background: linear-gradient(
+    342deg,
+    rgba(3, 25, 62, 1) 0%,
+    rgba(7, 71, 177, 1) 61%,
+    rgba(248, 250, 255, 1) 99%
+  ); */
+}
+
+.back-btn {
+  width: 100px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 20px;
+  background-color: #041243;
+  color: white;
+}
+
+.btn-outline {
+  width: 90px;
+}
+
+.vmn-form {
+  width: 350px;
+  border-radius: 0px 0px 20px 20px;
+  background-color: #1e1e1e;
+  color: white;
+}
+.vmn-form-inpt {
+  width: 90%;
+  background-color: #3e3e3e;
+  margin-left: 2px;
+  color: white;
+  font-size: 2em;
+  padding: 10px;
+  margin-left: 15px;
+}
+
+.vmn-form-btn {
+  width: 90%;
+  background-color: #007bff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 18px;
+  color: white;
+}
+
+.label {
+  margin-left: 15px;
+}

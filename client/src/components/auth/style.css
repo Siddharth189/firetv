@@ -1,0 +1,40 @@
+.sub-btn {
+  background-color: #041243;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border: none;
+  margin: 10px;
+  width: 80px;
+  transition-duration: 0.8s;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.sub-btn:hover {
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.auth-page {
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(3, 25, 62);
+  background: linear-gradient(
+    342deg,
+    rgba(3, 25, 62, 1) 0%,
+    rgba(7, 71, 177, 1) 61%,
+    rgba(248, 250, 255, 1) 99%
+  );
+}
+
+.auth-page input {
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.auth-box {
+  margin-top: 170px;
+}

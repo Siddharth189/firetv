@@ -1,0 +1,31 @@
+.custom-search {
+  width: 500px;
+  height: 50px;
+  padding-left: 70px;
+  padding-right: 60px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 1.5em;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  transition: width 0.35s ease-in-out;
+}
+.custom-search:focus {
+  width: 700px;
+  outline: none !important;
+  /* border: 1px solid red; */
+  box-shadow: 0 0 10px #719ece;
+}
+
+.search-btn {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.5em;
+  background: pink;
+  cursor: pointer;
+  color: white;
+}
