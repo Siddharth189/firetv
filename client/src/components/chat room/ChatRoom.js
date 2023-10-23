@@ -12,6 +12,7 @@ import { useSelector } from "react-redux";
 import "./style.css";
 import VideoBox from "./VideoBox";
 import { useNavigate } from "react-router-dom";
+import Enigma from "../enigma/Enigma";
 
 // const socket = io.connect('http://localhost:3001');
 const socket = io.connect("http://localhost:8080");
@@ -97,7 +98,10 @@ const ChatRoom = () => {
         <button className="back-btn" onClick={() => navigate(-1)}>
           {"Back"}
         </button>
-        <VideoBox />
+        <Enigma />
+        <div style={{ position: "sticky" }}>
+          <VideoBox />
+        </div>
       </div>
       <div className="main-content">
         {userState.name.length === 0 ? (

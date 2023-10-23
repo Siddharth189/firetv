@@ -1,0 +1,100 @@
+.chat-box {
+  width: 600px;
+  height: 760px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  align-items: center;
+  z-index: 1;
+}
+
+.chat-message {
+  width: 600px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 620px; /* Limit the chat box height; adjust as needed */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.chat-heading {
+  width: 90%;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  font-weight: 300;
+  font-family: monospace;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  border-bottom: 2px solid white;
+  align-items: center;
+}
+
+.chat-message {
+  color: white;
+  /* text-align: right; */
+  font-size: 20px;
+  padding: 10px;
+
+  /* border-bottom: 1px solid black; */
+  overflow-wrap: break-word; /* Wrap long text within the message box */
+}
+
+.bot-message {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 20px;
+
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px;
+  display: inline-block;
+  max-width: 75%; /* Limit message width to 75% of the chat box */
+}
+
+.user-message {
+  float: right;
+  background-color: black;
+  color: #fff;
+  font-size: 20px;
+
+  border-radius: 10px;
+  padding: 10px;
+  margin: auto;
+  /* display: inline-block; */
+  max-width: 75%; /* Limit message width to 75% of the chat box */
+}
+
+.user-input {
+  font-size: 20px;
+  background-color: rgba(218, 217, 217, 0.507);
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-right: 10px;
+  font-size: 20px;
+  outline: none;
+  color: white;
+  width: 450px;
+  outline: none;
+  border: none;
+}
+.user-input:focus {
+  outline: none !important;
+}
+
+.send-button {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 40px;
+  height: auto;
+}
+
+.user-input::placeholder {
+  font-size: 20px;
+  color: black;
+}
