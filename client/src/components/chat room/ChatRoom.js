@@ -95,11 +95,15 @@ const ChatRoom = () => {
             "rgba(2, 68, 107, 0.80) 0px 15px 25px, rgba(2, 68, 107, 0.70) 0px 5px 10px",
         }}
       >
-        <button className="back-btn" onClick={() => navigate(-1)}>
-          {"Back"}
-        </button>
-        <Enigma />
-        <div style={{ position: "sticky" }}>
+        <div className="justify-between">
+          <button className="back-btn" onClick={() => navigate(-1)}>
+            {"Back"}
+          </button>
+          <div style={{ paddingRight: "25px" }}>
+            <Enigma />
+          </div>
+        </div>
+        <div>
           <VideoBox />
         </div>
       </div>

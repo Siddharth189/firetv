@@ -1,9 +1,11 @@
-const VoiceRecorderComponent = () => {
+import React from "react";
+
+function VoiceRecorderComponent() {
   return (
     <div>
-      <h1>Hello mic check</h1>
+      <h1>VoiceRecorderComponent</h1>
     </div>
   );
-};
+}
 
 export default VoiceRecorderComponent;

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { GrSearch } from "react-icons/gr";
 import "./style.css";
-import { AudioRecorder } from "react-audio-voice-recorder";
 import VoiceRecorderComponent from "./VoiceRecorderComponent";
 
 const Search = () => {
@@ -47,7 +46,8 @@ const Search = () => {
   return (
     <div className="flex-row">
       <form className="flex-row" onSubmit={handleFormSubmit}>
-        <VoiceRecorderComponent />
+        <VoiceRecorderComponent onSpeechResult={setSearchText} />
+
         <input
           name="search"
           type="text"
@@ -66,14 +66,14 @@ const Search = () => {
       </form>
       <div className="response-container">
         {error && <div>Error: {error.message}</div>}
-        {
-          /* {responseData?.map((item, index) => (
+        {/* 
+        {responseData?.map((item, index) => (
           <div key={index} className="response-item">
             <p>{JSON.stringify(item)}</p>
           </div>
-        ))} */
-          console.log(responseData)
-        }
+        )} 
+        */}
+        {console.log(responseData)}
       </div>
     </div>
   );

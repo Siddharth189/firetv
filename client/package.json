@@ -26,6 +26,7 @@
     "react-scripts": "^5.0.1",
     "react-speech-recognition": "^3.10.0",
     "react-swipeable": "^7.0.1",
+    "reactjs-popup": "^2.0.6",
     "sass": "^1.69.4",
     "socket.io-client": "^4.7.2",
     "video-react": "^0.16.0"
