@@ -10,32 +10,3 @@
     rgba(248, 250, 255, 1) 99%
   );
 }
-
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  width: 400px;
-  height: 250px;
-  background-color: #041243;
-  color: white;
-  margin: 20px;
-  padding: 30px;
-  border-radius: 10px;
-}
-
-.card:hover {
-  box-shadow: 0 8px 8px -4px lightblue;
-}
-
-.card-container {
-  width: 80%;
-  align-self: center;
-}
-
-.card-data {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-}
