@@ -1,6 +1,38 @@
 import { BiSolidLike } from "react-icons/bi";
+import {useState, useEffect} from "react"
 import { Link } from "react-router-dom";
 const Card = ({ id, title, thumbnail, url, views, likes, cloudinaryID, popularity, vote_count }) => {
+  const [image, setImage] = useState(thumbnail);
+
+  useEffect(() => {
+    if (!thumbnail) {
+      // Make an API call to fetch the image
+      fetch("http://localhost:6000/image", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ movie_id: id }),
+      })
+        .then((response) => {
+          if (response.ok) {
+            return response.text();
+          } else {
+            throw new Error("API error");
+          }
+        })
+        .then((data) => {
+          console.log("Images Api Call: ", data);
+          setImage(data);
+        })
+        .catch((error) => {
+          console.error("Error fetching image:", error);
+        });
+    }
+  }, [id, thumbnail]);
+
+  
+  
   function formatCompactNumber(number) {
     const formatter = Intl.NumberFormat("en", { notation: "compact" });
     return formatter.format(number);
