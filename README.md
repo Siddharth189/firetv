@@ -69,7 +69,7 @@ By implementing these strategies and continuously analyzing relevant metrics, ou
 
 ## Homepage with Custom AI search
 
-![App Screenshot](https://res.cloudinary.com/dcymfuuko/image/upload/v1698194575/ai_search_ya4bot.png)
+![App Screenshot](https://res.cloudinary.com/dko27pkev/image/upload/v1698228931/cu_l9a6pl.png)
 
 ## Upload 
 ![App Screenshot](https://res.cloudinary.com/dcymfuuko/image/upload/v1698192753/Screenshot_20231011_041519_erasi3.png)
