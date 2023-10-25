@@ -5,8 +5,10 @@ import SEND from ".././../assets/images/send-image.jpg";
 import AVATAR from ".././../assets/images/avatar.png";
 import ROBO from ".././../assets/images/robo-image.jpeg";
 import ENIGMA from ".././../assets/images/robo.gif";
+import VoiceRecorderComponent from "../custom ai search/VoiceRecorderComponent";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
+
 
 const Enigma = () => {
   const [isEnigmaOpen, setIsEnigmaOpen] = useState(false);
@@ -38,14 +40,16 @@ const Enigma = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/bot_response", {
+      const response = await fetch("http://localhost:5050/bot_response", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
+      
         body: JSON.stringify({ content_desc, query }),
       });
       const data = await response.json();
+      console.log("Chat Response", data);
       const formattedData = formatResponse(data.response);
       setResp([
         ...resp,
@@ -57,30 +61,7 @@ const Enigma = () => {
       console.error("Error fetching data from the server:", error);
     }
   };
-  // console.log("Hello ", isEnigmaOpen);
-  // if (isEnigmaOpen === false) {
-  //   return (
-  // <button
-  //   onClick={() => setIsEnigmaOpen(true)}
-  //   style={{
-  //     borderRadius: "20px",
-  //     backgroundColor: "none",
-  //     border: "none",
-  //     cursor: "pointer",
-  //   }}
-  // >
-  //   <img
-  //     src={ENIGMA}
-  //     alt="ENGIMA"
-  //     style={{
-  //       width: "100px",
-  //       height: "100px",
-  //       borderRadius: "20px",
-  //     }}
-  //   />
-  // </button>
-  //   );
-  // }
+
   return (
     <Popup
       trigger={
@@ -111,19 +92,7 @@ const Enigma = () => {
       <div className="chat-box">
         <div className="chat-heading justify-between">
           <p>
-            ~ENIGMA{" "}
-            {/* <button
-              onClick={() => setIsEnigmaOpen(false)}
-              style={{
-                border: "none",
-                fontSize: "40px",
-                borderRadius: "50%",
-                width: "50px",
-                height: "50px",
-              }}
-            >
-              x
-            </button> */}
+            ~ENIGMA
           </p>
         </div>
 
@@ -164,25 +133,15 @@ const Enigma = () => {
           ))}
         </div>
 
+      <div className="flex-row">
         <div className="flex-row">
-          <div>
-            <label
-              className="image-input"
-              style={{
-                cursor: "pointer",
-                fontSize: "3em",
-                marginRight: "10px",
-              }}
-            >
-              +
-            </label>
-            <input
-              type="file"
-              className="image-input"
-              accept="image/*"
-              style={{ display: "none" }}
-            />
-          </div>
+          <label
+            className="image-input flex-row"
+            style={{ cursor: "pointer", fontSize: "3em", marginRight: "50px", marginBottom: "20px" }}
+          >
+            <VoiceRecorderComponent onSpeechResult={setQuery}/>
+          </label>
+
           <input
             type="text"
             className="user-input"
@@ -199,6 +158,7 @@ const Enigma = () => {
             style={{ cursor: "pointer" }}
           />
         </div>
+      </div>
       </div>
     </Popup>
   );

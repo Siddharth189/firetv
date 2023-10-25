@@ -1,6 +1,6 @@
 import { BiSolidLike } from "react-icons/bi";
 import { Link } from "react-router-dom";
-const Card = ({ id, title, thumbnail, url, views, likes, cloudinaryID }) => {
+const Card = ({ id, title, thumbnail, url, views, likes, cloudinaryID, popularity, vote_count }) => {
   function formatCompactNumber(number) {
     const formatter = Intl.NumberFormat("en", { notation: "compact" });
     return formatter.format(number);
@@ -14,7 +14,12 @@ const Card = ({ id, title, thumbnail, url, views, likes, cloudinaryID }) => {
   };
 
   return (
-    <Link to={"/chatroom/" + cloudinaryID}>
+    <Link to={{
+      pathname: "/chatroom/" + id,
+      search: title,
+      hash: title,
+      state: { title: "hello" }
+    }}>
       <div className="card" style={sectionStyle}>
         <div></div>
         <div>
@@ -22,10 +27,10 @@ const Card = ({ id, title, thumbnail, url, views, likes, cloudinaryID }) => {
         </div>
         <div className="card-data">
           <div>
-            <p>{formatCompactNumber(views)} views</p>
+            <p>{formatCompactNumber(views ? views : vote_count * 4)} views</p>
           </div>
           <div className="flex-row">
-            <p>{formatCompactNumber(likes)}</p>{" "}
+            <p>{formatCompactNumber(likes ? likes : vote_count)}</p>{" "}
             <BiSolidLike
               style={{
                 fontSize: "1.2em",

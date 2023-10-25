@@ -41,14 +41,26 @@ const Search = () => {
   const [searchText, setSearchText] = useState("");
   const [responseData, setResponseData] = useState([]);
   const [error, setError] = useState(null);
+  const [isListening, setIsListening] = useState(false); // Track listening state
+  const [listeningText, setListeningText] = useState(""); // Track recognized speech
+
 
   const handleMicClick = async () => {
+    if (isListening) {
+      setIsListening(false); // Stop listening
+    } else {
+      setIsListening(true); // Start listening
+      setListeningText(""); // Clear recognized speech
+    }
+
     const recognition = new window.webkitSpeechRecognition();
     recognition.lang = "en-US";
 
     recognition.onresult = (event) => {
       const transcript = event.results[0][0].transcript;
-      setSearchText(transcript);
+      if (isListening) {
+        setListeningText((prevText) => prevText + " " + transcript); // Append recognized speech
+      }
     };
 
     recognition.start();
@@ -57,7 +69,7 @@ const Search = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:8080/search-msg", {
+      const response = await fetch("http://localhost:5000/search-query", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -88,7 +100,7 @@ const Search = () => {
             type="text"
             className="custom-search"
             placeholder="AI powered custom search..."
-            value={searchText}
+            value={isListening ? listeningText : searchText} // Display listening text when listening
             onChange={(e) => setSearchText(e.target.value)}
           />
           <button
@@ -101,14 +113,7 @@ const Search = () => {
         </form>
         <div className="response-container">
           {error && <div>Error: {error.message}</div>}
-          {/* 
-        {responseData?.map((item, index) => (
-          <div key={index} className="response-item">
-            <p>{JSON.stringify(item)}</p>
-          </div>
-        )} 
-        */}
-          {console.log(responseData)}
+          
         </div>
       </div>
 
@@ -129,14 +134,18 @@ const Search = () => {
         <div>
           <h1
             style={{
-              marginLeft: "250px",
+              marginLeft: "220px",
               marginBottom: "-80px",
               marginTop: "30px",
             }}
           >
             Search Results
           </h1>
-          <ContentDiv contentData={searchData} />
+          {responseData?.RecommendedMovies !== null && <ContentDiv contentData={responseData?.RecommendedMovies} />}
+          {console.log(responseData)}
+        {/* {responseData === null ? <div> <h1>No data to show...</h1></div> : <div>{responseData?.RecommendedMovies?.map((item) => {
+          return <p>{item?.original_title}</p>
+        })}</div>} */}
         </div>
       )}
     </div>

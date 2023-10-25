@@ -1,0 +1,20 @@
+Horror
+Documentary
+Thriller
+Music
+Fantasy
+Drama
+Crime
+Comedy
+Action
+Western
+Romance
+Science Fiction
+Family
+War
+Foreign
+Adventure
+Animation
+TV Movie
+History
+Mystery

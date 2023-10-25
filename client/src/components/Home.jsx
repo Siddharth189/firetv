@@ -8,10 +8,6 @@ function Home() {
     <div className="home-page">
       <Header />
       <Search />
-
-      {/* <AudioRecorder /> */}
-
-      <Enigma />
     </div>
   );
 }

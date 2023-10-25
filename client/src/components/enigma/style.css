@@ -1,6 +1,6 @@
 .chat-box {
   width: 600px;
-  height: 760px;
+  height: 600px;
   display: flex;
   flex-direction: column;
   background-color: rgba(62, 62, 62, 0.5);
@@ -13,7 +13,7 @@
   width: 600px;
   overflow-y: auto;
   overflow-x: hidden;
-  height: 620px; /* Limit the chat box height; adjust as needed */
+  height: 550px; /* Limit the chat box height; adjust as needed */
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE/Edge */
 }
@@ -80,6 +80,7 @@
   outline: none;
   border: none;
 }
+
 .user-input:focus {
   outline: none !important;
 }

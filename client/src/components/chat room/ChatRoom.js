@@ -7,7 +7,7 @@ import ChatComponent from "./components/ChatComponent";
 import ChatRoomComponent from "./components/ChatRoomComponent";
 import "./styles/App.scss";
 import LandingComponent from "./components/LandingComponent";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./style.css";
 import VideoBox from "./VideoBox";
@@ -39,6 +39,9 @@ const ChatRoom = () => {
   //     </div>
   //   );
   // }
+  const location = useLocation();
+  const title = location.state ? location.state.title : null;
+  console.log("Use Param res: ", title, "lndsvj: ", location);
   const [userState, setUserState] = useState({
     userId: "",
     name: "",
@@ -87,7 +90,7 @@ const ChatRoom = () => {
     >
       <div
         style={{
-          width: "78vw",
+          width: "70vw",
           margin: "auto",
           borderRadius: "15px" /* Adjust the radius to your preference */,
           overflow: "hidden",

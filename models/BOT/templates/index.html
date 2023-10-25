@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Bot</title>
+</head>
+<body>
+    <form action="/bot_response" method="post">
+        Movie Name: <input type="text" name="movie_name"><br>
+        User Input: <input type="text" name="user_input"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p>{{response | safe}}</p>
+</body>
+</html>

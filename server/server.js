@@ -13,7 +13,7 @@ const port = 8080;
 // Connect to MongoDB
 const dbURL =
   //   "mongodb+srv://siddharth:7s3XnilcOgUSNFEs@cluster0.xg2bger.mongodb.net/userDB?retryWrites=true&w=majority";
-  "mongodb://localhost:27017/fireDB";
+  "mongodb://0.0.0.0:27017/fireDB";
 
 mongoose
   .connect(dbURL, {

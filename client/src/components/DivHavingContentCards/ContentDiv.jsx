@@ -8,7 +8,7 @@ const ContentDiv = ({ contentData }) => {
     <div>
       <div className="flex-row" style={{ marginTop: "80px" }}>
         <div className="card-container flex-row">
-          {contentData.map((item) => {
+          {contentData?.map((item) => {
             return <Card {...item} />;
           })}
         </div>
