@@ -7,7 +7,6 @@ const Card = ({
   url,
   views,
   likes,
-  
   Popularity,
   VoteCount,
   PosterURL,

@@ -1,13 +1,15 @@
+import { useState } from "react";
 import Header from "../Header";
 import ContentDiv from "../DivHavingContentCards/ContentDiv";
 import "./styles.css";
 
 const Curated = () => {
+  const [responseData, setResponseData] = useState([]);
   const data = [
     {
       id: 1,
-      title: "IND vs AUS",
-      thumbnail:
+      MovieName: "IND vs AUS",
+      PosterURL:
         "https://cdn.siasat.com/wp-content/uploads/2022/09/2022_9img23_Sep_2022_PTI09_23_2022_000311B-scaled.jpg",
       url: "",
       likes: 123,
@@ -16,9 +18,9 @@ const Curated = () => {
     },
     {
       id: 2,
-      title: "Jawan",
+      MovieName: "Jawan",
       url: "",
-      thumbnail:
+      PosterURL:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwnlt2U3pD1ITusQbCa1LTDj5HjNTqCsvjGA&usqp=CAU",
       likes: 9300,
       views: 343447874,
@@ -26,8 +28,8 @@ const Curated = () => {
     },
     {
       id: 3,
-      title: "Carrie",
-      thumbnail:
+      MovieName: "Carrie",
+      PosterURL:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoky-h1Vay3c3PuWBNffKqgneKRamAe8OPKQ&usqp=CAU",
       url: "",
       likes: 34000,
@@ -36,8 +38,8 @@ const Curated = () => {
     },
     {
       id: 4,
-      title: "Content ABC",
-      thumbnail:
+      MovieName: "Content ABC",
+      PosterURL:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLuSfA6uG8JFrM5ISZwfL3DWIJDutPi5oq8g&usqp=CAU",
       url: "",
       likes: 123,
@@ -46,8 +48,8 @@ const Curated = () => {
     },
     {
       id: 5,
-      title: "Content ABC",
-      thumbnail:
+      MovieName: "Content ABC",
+      PosterURL:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLuSfA6uG8JFrM5ISZwfL3DWIJDutPi5oq8g&usqp=CAU",
       url: "",
       likes: 123,
@@ -56,8 +58,8 @@ const Curated = () => {
     },
     {
       id: 6,
-      title: "Content ABC",
-      thumbnail:
+      MovieName: "Content ABC",
+      PosterURL:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLuSfA6uG8JFrM5ISZwfL3DWIJDutPi5oq8g&usqp=CAU",
       url: "",
       likes: 123,
@@ -65,6 +67,7 @@ const Curated = () => {
       cloudinaryID: "456y3h4jifkc",
     },
   ];
+
   return (
     <div className="curated-page">
       <Header />
