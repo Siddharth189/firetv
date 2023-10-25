@@ -85,7 +85,7 @@ By implementing these strategies and continuously analyzing relevant metrics, ou
 
 ## Enigma Chatbot
 
-![App Screenshot](https://res.cloudinary.com/dcymfuuko/image/upload/v1698194575/e2_j7nvl1.png)
+![App Screenshot](https://res.cloudinary.com/dko27pkev/image/upload/v1698230089/e_sw3a7o.png)
 
 
 
