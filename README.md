@@ -67,9 +67,9 @@ By implementing these strategies and continuously analyzing relevant metrics, ou
 
 ![App Screenshot](https://res.cloudinary.com/dcymfuuko/image/upload/v1698192753/Screenshot_20231011_034819_ecouth.png)
 
-## Homepage
+## Homepage with Custom AI search
 
-![App Screenshot](https://res.cloudinary.com/dcymfuuko/image/upload/v1698192753/Screenshot_20231010_233146_1_yxzw9y.png)
+![App Screenshot](https://res.cloudinary.com/dcymfuuko/image/upload/v1698194575/ai_search_ya4bot.png)
 
 ## Upload 
 ![App Screenshot](https://res.cloudinary.com/dcymfuuko/image/upload/v1698192753/Screenshot_20231011_041519_erasi3.png)
@@ -85,7 +85,7 @@ By implementing these strategies and continuously analyzing relevant metrics, ou
 
 ## Enigma Chatbot
 
-![App Screenshot](https://res.cloudinary.com/dcymfuuko/image/upload/v1698192754/Screenshot_20231010_233101_rbzhru.png)
+![App Screenshot](https://res.cloudinary.com/dcymfuuko/image/upload/v1698194575/e2_j7nvl1.png)
 
 
 
