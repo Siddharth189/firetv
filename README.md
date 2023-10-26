@@ -1,5 +1,5 @@
 #video link
-https://drive.google.com/file/d/1ssvwx8CZn_hsiOVIZ0-56ruwT8pD0g9a/view?usp=drive_link
+https://drive.google.com/file/d/1uokZQ3zqUY0Jtytkhz2oPbat8AegM3_l/view?usp=sharing
 # Fire TV
 
 The "Fire TV Personalized Content Advisor" is a revolutionary tool for Amazon's Fire TV platform, engineered with the latest advancements in Machine Learning (ML) and Deep Learning (DL) technologies, prominently featuring the prowess of Large Language Models (LLM). Its primary mission is to decipher your entertainment preferences, presenting movies and shows that align with your past viewing history and geographic location. This sophisticated tool encompasses a range of essential features, including voice-activated commands, family-friendly filters to ensure age-appropriate content, handcrafted playlists for effortless content exploration, and avenues for monetization through subscriptions and content partnerships. Collectively, these components elevate the user experience and engagement.
