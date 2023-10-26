@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "../Header";
 import ContentDiv from "../DivHavingContentCards/ContentDiv";
 import "./styles.css";
+import { useSelector } from "react-redux";
 
 const Curated = () => {
   const [responseData, setResponseData] = useState([]);
+  const [error, setError] = useState(null);
+
   const data = [
     {
       id: 1,
@@ -68,10 +71,40 @@ const Curated = () => {
     },
   ];
 
+  const history_array = ["Water", "The Dark Knight", "Paa"];
+  let user_history = useSelector((store) => store.history.user_history);
+  user_history = user_history.length === 0 ? history_array : user_history; 
+  // console.log("History: ", history_array);
+  async function getData() {
+    try {
+      const response = await fetch('http://localhost:5430/recommend', {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ user_history }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const data = await response.json();
+      console.log("hello from Curated: ", data);
+      setResponseData(data);
+    } catch (error) {
+      console.error("Error occurred during API call:", error);
+      setError(error);
+    }
+  }
+  useEffect(()=> {
+    console.log("hello hi hello")
+    getData();
+  }, []);
   return (
     <div className="curated-page">
       <Header />
-      <ContentDiv contentData={data} />
+      <ContentDiv contentData={responseData} />
     </div>
   );
 };

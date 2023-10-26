@@ -10,7 +10,7 @@ import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 
 
-const Enigma = () => {
+const Enigma = ({title}) => {
   const [isEnigmaOpen, setIsEnigmaOpen] = useState(false);
   // ********************** Getting users Login Status *************************************//
   const token = useSelector((store) => store.auth.token);
@@ -25,7 +25,7 @@ const Enigma = () => {
   const [resp, setResp] = useState([
     { text: "Welcome! How can I assist you today?", isUser: false },
   ]);
-  const [content_desc, setContent_desc] = useState("Jawan");
+  const [content_desc, setContent_desc] = useState(title);
   const [query, setQuery] = useState("");
 
   const formatResponse = (response) => {
@@ -132,7 +132,7 @@ const Enigma = () => {
             </div>
           ))}
         </div>
-
+      {console.log("Content Name: ", content_desc)}
       <div className="flex-row">
         <div className="flex-row">
           <label

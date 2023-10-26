@@ -8,11 +8,12 @@ import ChatRoomComponent from "./components/ChatRoomComponent";
 import "./styles/App.scss";
 import LandingComponent from "./components/LandingComponent";
 import { Link, useLocation, useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "./style.css";
 import VideoBox from "./VideoBox";
 import { useNavigate } from "react-router-dom";
 import Enigma from "../enigma/Enigma";
+import { addMovieName } from "../../utils/historySlice";
 
 // const socket = io.connect('http://localhost:3001');
 const socket = io.connect("http://localhost:8080");
@@ -40,8 +41,11 @@ const ChatRoom = () => {
   //   );
   // }
   const location = useLocation();
-  const title = location.state ? location.state.title : null;
-  console.log("Use Param res: ", title, "lndsvj: ", location);
+  const MovieName = location.state ? location.state.MovieName : null;
+  console.log("Use Param res: ", MovieName, "lndsvj: ", location);
+  const dispatch = useDispatch();
+  dispatch(addMovieName(MovieName));
+
   const [userState, setUserState] = useState({
     userId: "",
     name: "",
@@ -102,8 +106,9 @@ const ChatRoom = () => {
           <button className="back-btn" onClick={() => navigate(-1)}>
             {"Back"}
           </button>
+          <p style={{color: "white", fontSize: "2em"}}>{MovieName}</p>
           <div style={{ paddingRight: "25px" }}>
-            <Enigma />
+            <Enigma title = {MovieName} />
           </div>
         </div>
         <div>

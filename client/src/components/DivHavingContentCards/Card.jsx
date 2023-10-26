@@ -26,14 +26,16 @@ const Card = ({
   };
 
   return (
-    <Link
-      to={{
-        pathname: "/chatroom/" + MovieID,
-        search: MovieName,
-        hash: MovieName,
-        state: { MovieName: "hello" },
-      }}
-    >
+    // <Link
+    //   to={{
+    //     pathname: "/chatroom/" + MovieID,
+    //     search: MovieName,
+    //     hash: MovieName,
+    //     state: { MovieName: "hello" },
+    //   }}
+    // >
+    <Link to={'/chatroom/' + MovieID} state={{MovieName}}>
+
       <div className="card" style={sectionStyle}>
         <div></div>
         <div>
