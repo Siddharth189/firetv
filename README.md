@@ -65,7 +65,7 @@ By implementing these strategies and continuously analyzing relevant metrics, ou
 **Virtual Movie Night**: Enhance shared cinematic experiences with Virtual Movie Night. The feature enables synchronized movie viewings among friends and family, with real-time interaction and discussion capabilities. Users can engage in audio/video streaming, share images, and chat during the movie, fostering a sense of community and interaction.
 ## Login Page
 
-![App Screenshot](https://res.cloudinary.com/dcymfuuko/image/upload/v1698192753/Screenshot_20231011_034819_ecouth.png)
+![App Screenshot](https://res.cloudinary.com/dko27pkev/image/upload/v1698297605/login_dpyfi8.png)
 
 ## Homepage with Custom AI search
 
