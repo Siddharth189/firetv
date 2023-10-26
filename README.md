@@ -72,11 +72,11 @@ By implementing these strategies and continuously analyzing relevant metrics, ou
 ![App Screenshot](https://res.cloudinary.com/dko27pkev/image/upload/v1698228931/cu_l9a6pl.png)
 
 ## Upload 
-![App Screenshot](https://res.cloudinary.com/dcymfuuko/image/upload/v1698192753/Screenshot_20231011_041519_erasi3.png)
+![App Screenshot](https://res.cloudinary.com/dko27pkev/image/upload/v1698293743/photo_2023-10-26_09-45-18_nmvd0u.jpg)
 
 ## Curated Playlist
 
-![App Screenshot](https://res.cloudinary.com/dcymfuuko/image/upload/v1698192948/photo_2023-10-25_05-45-12_w9qsdv.jpg)
+![App Screenshot](https://res.cloudinary.com/dko27pkev/image/upload/v1698293591/cur_coklva.png)
 
 ## Movie Night
 
