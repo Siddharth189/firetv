@@ -37,7 +37,7 @@ Our vision encompasses leveraging our platform to drive revenue for Amazon while
 
 4. **Free User Model**:
 
-**Quality and Ads:** Free users may experience limited quality and more ads. We will offer a free tier with sponsored content, where advertisers pay for ad placements. We will closely monitor user feedback and metrics to find the right balance.
+**Quality and Ads:** Free users may experience limited quality,limited access of ~Enigma chat bot and more ads. We will offer a free tier with sponsored content, where advertisers pay for ad placements. We will closely monitor user feedback and metrics to find the right balance.
 
 **Regional Content:** Expanding our content library to include regional content in users' preferred languages will attract a diverse audience and enhance user satisfaction.
 
